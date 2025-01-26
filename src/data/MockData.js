@@ -32,7 +32,7 @@ export const HeadphoneData = [
     image: Img1,
     title: "Apple AirPods Wireless Over-Ear Headphones",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae iusto minima ad ut id eos iusto minima ad ut id eos ad ut id eos",
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur magnam perferendis labore totam recusandae aperiam quam aliquid in dolorum ipsa assumenda eius sint corrupti beatae, enim consequatur minus earum saepe.",
     price: "$40.99",
     modal: "AirPods",
     bgColor: "#e85950",
@@ -42,7 +42,7 @@ export const HeadphoneData = [
     image: Img2,
     title: "Apple AirPods Max Wireless Over-Ear Headphones",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae iusto minima ad ut id eos iusto minima ad ut id eos ad ut id eos",
+      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab veritatis harum facere eum odio quo, maiores facilis cum magnam deserunt repellendus impedit! Tempora, soluta earum. Rerum, recusandae. Asperiores, iste sint?",
     price: "$100.00",
     modal: "Max",
     bgColor: "#24b4bc",

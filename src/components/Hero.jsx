@@ -3,6 +3,9 @@ import Navbar from './Navbar'
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { FaMessage } from 'react-icons/fa6';
 import { HeadphoneData } from '../data/MockData';
+import { motion, AnimatePresence } from 'framer-motion';
+import { SlideRight } from '../utility/animation'
+
 const Hero = () => {
   const [activeData, setActiveData] = useState(HeadphoneData[0]);
   const [currentIndext, setCurrentIndex] = useState(0);
@@ -26,9 +29,41 @@ const Hero = () => {
         {/* headphoen info section */}
         <div className='flex flex-col justify-center py-14 md:py-0 xl:max-w-[500px] order-2 md:order-1'>
           <div className='space-y-5md:space-y-7 text-center md:text-left'>
-            <h1 className='text-3xl lg:text-4xl xl:text-5xl font-bold'>{activeData.title}</h1>
-            <p className='text-sm leading-loose text-white/80'>{activeData.subtitle}</p>
-            <p className='text-3xl lg:text-4xl xl:text-5xl font-bold'>{activeData.price}</p>
+            <AnimatePresence mode="wait">
+              <motion.h1
+                key={activeData.id}
+                variants={SlideRight(0.2)}
+                initial="hidden"
+                whileInView="show"
+                exit="exit"
+                className='text-3xl lg:text-4xl xl:text-5xl font-bold'
+              >
+                {activeData.title}
+              </motion.h1>
+            </AnimatePresence>
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={activeData.id}
+                variants={SlideRight(0.4)}
+                initial="hidden"
+                whileInView="show"
+                exit="exit"
+                className='text-sm leading-loose text-white/80'
+              >
+                {activeData.subtitle}
+              </motion.p>
+            </AnimatePresence>
+            <motion.p
+              key={activeData.id}
+              variants={SlideRight(0.6)}
+              initial="hidden"
+              whileInView="show"
+              exit="exit"
+              className='text-3xl lg:text-4xl xl:text-5xl font-bold'
+            >
+              {activeData.price}
+            </motion.p>
+
             {/* social icons section */}
             <div className='flex items-center justify-center md:justify-center gap-4 text-3xl'>
               <FaInstagram className='cursor-pointer border bordered-full p-[6px]' />
