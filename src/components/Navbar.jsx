@@ -1,12 +1,17 @@
 import { MdMenu } from 'react-icons/md';
 import { FaApple, FaRegUser } from 'react-icons/fa'
 import { NavbarData } from '../data/MockData';
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
 
   return (
     <nav className="text-white py-5">
-      <div className="container flex justify-between items-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="container flex justify-between items-center">
         {/* logo section */}
         <div className='flex items-center gap-2 text-3xl font-semibold'>
           <FaApple />
@@ -36,8 +41,8 @@ const Navbar = () => {
         <div className='md:hidden'>
           <MdMenu className='text-4xl' />
         </div>
-      </div>
-    </nav>
+      </motion.div>
+    </nav >
   )
 }
 export default Navbar;
